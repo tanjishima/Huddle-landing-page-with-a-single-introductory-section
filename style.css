@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    font-size: 0.626rem;
+    --poppins: "Poppins", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+    --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+   background-size: cover; 
+   background-color:var(--Violet);
+   font-family: var(--open-sans);
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+/* hero-logo */
+.hero-logo{
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+}
+ 
+/* hero-content */
+.hero-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 4rem;
+    color: #ffffff;
+}
+.hero-img img{
+    max-width: 670px;
+}
+.hero-text{
+    margin-top:4rem ;
+}
+.hero-text h2{
+   max-width: 500px;
+    font-family: var(--poppins);
+    font-size:4rem;
+    font-weight: 600;
+}
+.hero-text p{
+    margin-top:3rem ;
+    font-family: var(--open-sans);
+    font-size: 1.8rem;
+    color: #f5f5f5;
+    line-height: 3rem;
+}
+/* button */
+.btn{
+    text-decoration: none;
+    padding: 1.4rem 5.6rem;
+    border-radius:3rem;
+    display:inline-block;
+    margin-top: 2.5rem;
+   background-color: #ffffff; 
+   color: var(--Violet);
+   font-size: 1.6rem;
+   font-family: var(--poppins);
+}
+.btn:hover{
+    background-color: var(--Soft-Magenta);
+    color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* social-icon */
+.social-icon{
+ color: #ffffff;
+ font-size: 2rem;
+ display: flex;
+ justify-content: flex-end;
+ gap: 1.8rem;
+ text-align: center;
+ margin-top:3rem ;
+}
+.social-icon i{
+    border: 2px solid #ffffff;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    padding: .5rem;
+}
+
+.social-icon:hover{
+    color: var(--Soft-Magenta);
+}
+
+@media(max-width:1024px){
+    body{
+     background-image: url(./images/bg-mobile.svg);
+      background-repeat: no-repeat;
+     background-size: cover;
+     background-color:var(--Violet);
+    }
+    .hero-logo{
+        margin-left: 6rem;
+    }
+    .hero-logo img{
+       margin-left: 3rem;
+    }
+     
+    .hero-content{
+        grid-template-columns: 1fr;
+        text-align: center; 
+        gap:8rem ;
+         
+    }
+    .hero-img img{
+         max-width: 700px;
+    }
+    .hero-text h2{
+         font-size:5.5rem ;
+        margin: 0 auto; 
+        max-width:800px ;
+    }
+    .hero-text p{
+        margin: 0 auto;
+        max-width: 800px;
+        margin-top: 5rem;
+        font-size:2.5rem ;
+        line-height: 4rem;
+    }
+         
+ .btn{
+      margin-top: 4.5rem;
+   }
+    .social-icon{
+        justify-content:center;
+        margin-left: 0;
+        margin-top: 5rem;
+        margin-bottom: 1rem;
+     }
+   
+}
+@media(max-width:853px){
+    .hero-logo img{
+        margin-left:-1rem;
+    }
+}
+
+@media(max-width:768px){
+    .hero-logo img{
+        max-width: 250px;
+    }
+    .hero-img img{
+        max-width: 550px;
+    }
+    .hero-text h2{
+        font-size:5rem ;
+    }
+}
+@media(max-width:540px){
+    html{
+       font-size: 0.5rem; 
+    }
+    .hero-logo img{
+        max-width: 200px;
+    }
+    .hero-img img{
+        max-width: 350px;
+    }
+    .social-icon{
+        font-size: 1.6rem;
+    }
+    .hero-text h2{
+        font-size: 3.5rem;
+       width:400px ; 
+    }
+    .hero-text p{
+        font-size: 2rem;
+        max-width:400px ;
+        line-height: 3rem;
+    }
+}
+@media(max-width:430px){
+    .hero-text h2{
+        max-width: 380px;
+    }
+    .hero-text p{
+        max-width: 380px;
+    }
+    .hero-logo img{
+        margin-left: -2rem;
+    }
+}
+@media(max-width:375px){
+    .hero-img img{
+        max-width: 300px;
+    }
+    
+    
+    .hero-text h2{
+        max-width: 300px;
+    }
+    .hero-text p{
+        max-width: 300px;
+    }
+}
