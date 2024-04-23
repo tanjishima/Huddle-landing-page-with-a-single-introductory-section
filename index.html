@@ -10,6 +10,7 @@
   <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
     rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
 </head>
@@ -19,25 +20,25 @@
     <section class="hero-section">
       <div class="container">
         <!-- hero-logo -->
-        <div class="hero-logo">
+        <div class="hero-logo" data-aos="fade-down">
           <img src="./images/logo.svg" alt="">
         </div>
         <!-- hero-content -->
         <div class="hero-content">
-          <div class="hero-img">
+          <div class="hero-img"  data-aos="fade-down-right">
             <img src="./images/illustration-mockups.svg" alt="">
           </div>
-          <div class="hero-text">
+          <div class="hero-text" data-aos="fade-down-left">
             <h2> Build The Community Your Fans Will Love</h2>
             <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
               Create connections with your users as you engage in genuine discussion. 
             </p>
             <!-- button -->
-            <a class="btn" href="#">Register</a>
+            <a data-aos="flip-right"class="btn" href="#">Register</a>
           </div>
         </div>
         <!-- social-icon -->
-        <div class="social-icon">
+        <div class="social-icon"  data-aos="zoom-in-up">
           <i class="ri-facebook-line"></i>
           <i class="ri-twitter-fill"></i>
           <i class="ri-instagram-line"></i>
@@ -45,6 +46,13 @@
       </div>
     </section>
   </main>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 1000,
+    });
+  </script>
   
  
 </body>
